@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}  
+
+  <hr>
+  <center>
+    <form method="POST" action="/signup/">
+      {% csrf_token %}
+      <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+  
+      <div class="w-50 form-floating">
+        <input type="name" name="firstname" class="form-control" placeholder="first name">
+        <label for="floatingInput">First Name</label>
+      </div>
+      <br>
+      <div class="w-50 form-floating">
+        <input type="name" name="lastname" class="form-control" placeholder="last name">
+        <label for="floatingInput">Last Name</label>
+      </div>
+      <br>
+      <div class="w-50 form-floating">
+        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <br>
+      <div class="w-50 form-floating">
+        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <br>
+      <button class="w-25 btn btn btn-primary" type="submit">Sign up</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2019–2023</p>
+    </form>
+  
+  </center>
+  {% endblock content %}

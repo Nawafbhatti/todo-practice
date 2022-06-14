@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block content %}  
+
+<hr>
+<center>
+  <form action="/update/{{ dotos.id }}/" method="POST">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Please Update.</h1>
+   
+
+    <div class="w-50">
+      <input type="text" value='{{ dotos.name }}' name="name" class="form-control" placeholder="Please enter">
+      
+    </div>
+    <br>
+    <div class="w-50">
+      <input type="name" value="{{ dotos.title }}" name="title" class="form-control" placeholder="Please enter">
+      
+    </div>
+    <br>
+    <div class="w-50">
+      <textarea type="name" name="bio" class="form-control" placeholder="Please enter">{{ dotos.bio }}</textarea>
+    </div>
+
+    <br>
+    <button class="w-25 btn btn btn-primary" type="submit">Update</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019–2023</p>
+  </form>
+  
+  </center>
+  {% endblock content %}
